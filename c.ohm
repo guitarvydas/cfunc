@@ -1,6 +1,8 @@
 Cfunctions {
   program = item+
-  item =    
+  item =
+    | comment
+    | string
     | applySyntactic<FunctionDecl> -- decl
     | any -- other
   FunctionDecl = name "(" param+ ")" "{" block+ "}"
@@ -14,4 +16,19 @@ Cfunctions {
       | ~"{" ~"}" any  -- flat
 
       name = letter (alnum | "_")*
+      comment =
+        | "//" (~nl any)* nl
+        | "/*" (~"*/" any)* "*/"
+      string =
+        | bqstring
+	| dqstring
+	| sqstring
+      bqstring = "`" (qbq | (~"`" any))* "`"
+      dqstring = "\"" (qdq | (~"\"" any))* "\""
+      sqstring = "'" (qsq | (~"'" any))* "'"
+      qbq = "\\" "`"
+      qdq = "\\" "\""
+      qsq = "\\" "'"
+      nl = "\n"
+      spaces += comment
 }
