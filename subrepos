@@ -1,0 +1,5 @@
+# Don't forget including your subrepos' roots to .gitignore!
+subrepos:
+- path: 'bred'
+  repo: 'git@github.com:guitarvydas/bred.git'
+  branch: 'dev'

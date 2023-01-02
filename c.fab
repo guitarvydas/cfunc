@@ -1,0 +1,11 @@
+Cfunctions {
+  program [item+] = ‛«item»’
+  item_decl [x] =  ‛«x»’
+  item_other [x] =  ‛’
+  FunctionDecl [name lp param+ rp lb block+ rb] = ‛\n«name»’
+    param_nested [lp param+ rp] = ‛’
+    param_flat [c] = ‛’
+    block_nested [lp block+ rp] = ‛’
+    block_flat [c] = ‛’
+      name [letter c*] = ‛«letter»«c»’
+}

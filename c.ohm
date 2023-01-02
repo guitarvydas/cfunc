@@ -1,0 +1,17 @@
+Cfunctions {
+  program = item+
+  item =    
+    | applySyntactic<FunctionDecl> -- decl
+    | any -- other
+  FunctionDecl = name "(" param+ ")" "{" block+ "}"
+
+    param =
+      | "(" param+ ")" -- nested
+      | ~"(" ~")" any  -- flat
+
+    block =
+      | "{" block+ "}" -- nested
+      | ~"{" ~"}" any  -- flat
+
+      name = letter (alnum | "_")*
+}
