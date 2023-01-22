@@ -8,7 +8,7 @@ Cfunctions {
     block_nested [lp block+ rp] = ‛’
     block_flat [c] = ‛’
       name [letter c*] = ‛«letter»«c»’
-      comment [x] =
+      comment [begin cs end] = ‛’
       nl [c] =  ‛«c»’
-      spaces += comment
+      spaces [cs] =  ‛«cs»’
 }
