@@ -11,4 +11,10 @@ Cfunctions {
       comment [begin cs end] = ‛’
       nl [c] =  ‛«c»’
       spaces [cs] =  ‛«cs»’
+      bqstring [begin cs* end] = ‛’
+      dqstring [begin cs* end] = ‛’
+      sqstring [begin cs* end] = ‛’
+      qbq [bslash c] = ‛’
+      qdq [bslash c] = ‛’
+      qsq [bslash c] = ‛’
 }

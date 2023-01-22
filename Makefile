@@ -1,6 +1,9 @@
 all: repos functionnamesquickie
 
 functionnamesquickie:
+	./fab/fab - Cfunctions c.ohm c.fab <grep.c
+
+functionnamesquickie_small_test:
 	./fab/fab - Cfunctions c.ohm c.fab <src.c
 
 install: repos npmstuff
