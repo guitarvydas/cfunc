@@ -1,8 +1,8 @@
 all:
-	./bred/jsbred c.bred bred <grep.c
+	./bred/bred c.bred bred <grep.c
 
 dev:
-	./bred/jsbred c.bred bred --keep <src.c
+	./bred/bred c.bred bred --keep <src.c
 
 install: repos npmstuff
 
