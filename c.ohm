@@ -21,8 +21,8 @@ Cfunctions {
         | "/*" (~"*/" any)* "*/"
       string =
         | bqstring
-	| dqstring
-	| sqstring
+        | dqstring
+        | sqstring
       bqstring = "`" (qbq | (~"`" any))* "`"
       dqstring = "\"" (qdq | (~"\"" any))* "\""
       sqstring = "'" (qsq | (~"'" any))* "'"
